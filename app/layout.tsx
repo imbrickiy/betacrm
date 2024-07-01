@@ -1,5 +1,4 @@
 import Sidebar from '@/components/Sidebar';
-import SidebarFull from '@/components/SidebarFull';
 import 'line-awesome/dist/line-awesome/css/line-awesome.css';
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
@@ -23,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={lato.className}>
-        <div className='flex min-h-screen'>
+        <div className='flex h-screen'>
           <Sidebar />
-          <main className='flex-1 min-w-0 overflow-auto'>{children}</main>
+          <main className='flex-1 overflow-auto'>{children}</main>
         </div>
       </body>
     </html>

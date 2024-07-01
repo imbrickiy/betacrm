@@ -1,9 +1,9 @@
 'use client';
-import { cn } from '@/lib/utils';
-import { useStore } from '@/store';
-import Image from 'next/image';
-import ActiveElement from './ActiveElement';
-import SidebarFull from './SidebarFull';
+import { cn } from '@/lib/utils'
+import { useStore } from '@/store'
+import Image from 'next/image'
+import ActiveElement from './ActiveElement'
+import SidebarFull from './SidebarFull'
 
 const nav = [
   // {
@@ -80,14 +80,14 @@ const Sidebar = () => {
     <>
       {sidebar === 'compact' ? (
         <div className='w-[82px] border-r-2 border-backgroundDark'>
-          <div className='flex h-16 shrink-0 flex-col items-center'>
-            <div className='mb-[20px] mt-[26px]'>
+          <div className='flex h-16 shrink-0 flex-col items-center '>
+            <div className=''>
               <Image
                 src='assets/Logo.svg'
                 width={30}
                 height={30}
                 alt='logo'
-                className='h-[30px] w-[30px]'
+                className='h-[30px] w-[30px] mb-[20px] mt-[26px]'
                 priority
               />
             </div>
@@ -122,7 +122,7 @@ const Sidebar = () => {
                 className='h-[30px] w-[30px]'
                 priority
               />
-              {active && <ActiveElement />}
+              {/* {active && <ActiveElement />} */}
             </div>
           </div>
         </div>

@@ -5,14 +5,14 @@ const SidebarFull = ({ nav }: any) => {
   const active = false;
   return (
     <div className='w-[242px] border-r-2'>
-      <div className='flex h-16 flex-col'>
-        <div className='flex h-[76px] w-full items-center justify-start bg-white'>
+      <div className='ml-[26px] flex h-full flex-col items-start justify-between'>
+        <div className='flex shrink-0 h-[76px] w-full items-center justify-start bg-white'>
           <Image
             src='assets/Logo.svg'
             width={30}
             height={30}
             alt='logo'
-            className='mb-[20px] ml-[29px] mt-[26px] h-[30px] w-[30px]'
+            className='mb-[20px]  mt-[26px] h-[30px] w-[30px]'
             priority
           />
           <p className='ml-[25px] h-[15px] w-[91px] font-extrabold text-[#5E81F4]'>
@@ -20,7 +20,7 @@ const SidebarFull = ({ nav }: any) => {
           </p>
         </div>
 
-        <div className='mb-16 mt-[82px]'>
+        <div className='mb-16 mt-[82px] h-full'>
           {nav.map((item: any, index: number) => (
             <div
               className='flex flex-col items-start justify-center'
@@ -40,7 +40,7 @@ const SidebarFull = ({ nav }: any) => {
           ))}
         </div>
 
-        <div className='fixed bottom-[25px] flex h-10 w-10 items-center justify-center'>
+        <div className='p-[26px] h-10 w-10'>
           <Image
             src='assets/Imguser.svg'
             width={30}
@@ -49,7 +49,7 @@ const SidebarFull = ({ nav }: any) => {
             className='h-[30px] w-[30px]'
             priority
           />
-          {active && <ActiveElement />}
+          {/* {active && <ActiveElement />} */}
         </div>
       </div>
     </div>
