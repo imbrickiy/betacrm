@@ -25,7 +25,6 @@ export default function RootLayout({
       <body className={lato.className}>
         <div className='flex min-h-screen'>
           <Sidebar />
-          <SidebarFull />
           <main className='flex-1 min-w-0 overflow-auto'>{children}</main>
         </div>
       </body>

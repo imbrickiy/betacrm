@@ -1,11 +1,19 @@
+'use client';
+import { useStore } from '@/store';
 import { HeaderButton } from './OwnComponents';
 
 export default function Header() {
+  const toggle = useStore((state) => state);
+  console.log(toggle);
   return (
     <header className=''>
       <nav className='flex max-w-7xl items-center justify-between py-6'>
         <div className='flex items-center'>
-          <HeaderButton>
+          <HeaderButton
+            onClick={() => {
+              toggle.toggleSidebar();
+            }}
+          >
             <span className='sr-only'>Open main menu</span>
             <i className='las la-bars h-[14px] w-[14px] text-[#8181A5]' />
           </HeaderButton>
